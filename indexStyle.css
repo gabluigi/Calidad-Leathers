@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('media/mainBg.png');
+    background-size: cover;
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    margin-top: 50px;
+    padding: 20px 0;
+    border-bottom: 2px solid #054800;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    max-width: 100%; 
+    width: 40%; 
+    height: auto; 
+}
+
+#profile{
+    width: 35px;
+    align-content: center;
+}
+
+#user{
+    padding-right: 0;
+}
+
+nav{
+    display: flex;
+    align-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+    font-family: "Lexend Zetta", sans-serif;
+    font-size: small;
+    color: #054800;
+    align-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #054800;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    text-align: left;
+    padding: 70px 20px;
+}
+
+.main h1 {
+    font-size: 3.5rem;
+    color: #054800;
+}
+
+.main p {
+    margin-top: 10px;
+    margin-bottom: 75px;
+    font-family: "Lexend", sans-serif;
+    font-size: 1.5rem;
+    color: #054800;
+}
+
+.btn {
+    font-family: "Lexend Zetta", sans-serif;
+    font-size: small;
+    display: inline-block;
+    padding: 10px 50px;
+    margin-top: 20px;
+    background-color: #054800;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px 2px rgba(0, 0, 0, 0.7);
+}
+.btn:hover{
+    background-color: #2AA440;
+}
+
+.btn:active{
+    background-color: #1E1E1E;
+}
+
+#mainshoe{
+    margin-top: 20px;
+    width: 900px;
+}
+.container2 {
+    margin: 0 auto;
+    width: 100%;
+    padding: 100px 50px;
+    background-image: url(media/home1.png);
+    background-size: cover;
+    border-radius: 20px;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    box-shadow: 4px 4px 20px 2px rgba(0, 0, 0, 0.7);
+}
+
+.container2 h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: white;
+    margin-left: 30px;
+}
+
+.container3 {
+    border-bottom: 2px solid #054800;
+    margin-bottom: 50px;
+}
+
+.subcontainer{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.featurePics{
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.feature {
+    max-width: 300px;
+}
+
+.feature h3 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 2rem;
+    color: #054800; 
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-family: "Lexend", sans-serif;
+    font-size: 1.2rem;
+    color: #054800;
+}
+.learnmore {
+    margin-bottom: 50px;
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+}
+
+
+@media (max-width: 768px) {
+    body {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    nav{
+        flex-direction: column;
+        display: block;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .container1 {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mainshoe {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .container2 {
+        padding: 50px 20px;
+        display: block;
+        width: 100%;
+    }
+
+    .container2 h2 {
+        font-size: 2.5rem;
+    }
+
+    .feature {
+        margin-bottom: 30px;
+    }
+
+    .featurePics {
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .main h1 {
+        font-size: 2.5rem;
+    }
+
+    .main p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 10px 30px;
+
+    }
+
+    #profile{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 1000px){
+    .subcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container3{
+        margin: 0 auto;
+        width: 50%;
+    }
+    .container3 h3{
+        font-size: 1.2rem;
+    }
+    .feature p{
+        font-size: 1rem;
+    }
+    .container3 img{
+        width: 80%;
+    }
+}
+@media (max-width: 1500px){
+    .container1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container1 img{
+        width: 50%;
+        
+    }
+    .container1 h2 {
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+

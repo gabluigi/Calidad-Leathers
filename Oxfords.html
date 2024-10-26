@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad Leathers - Oxfords</title>
+    <link rel="stylesheet" href="shoeStyle.css">
+    <link rel="icon" href="media/thumbs.png">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="media/mainLogo.png" alt="Calidad Logo" id = "logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Contacts.html">Contacts</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+            <div id="user">
+                <a href="Account.html"><img src="media/profile.png" alt="User Profile" id="profile"></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container1">
+        <div class="images">
+            <img src="media/oxfords1.png" alt="oxfords1" id="img1">
+            <img src="media/oxfords2.png" alt="oxfords2" id="img2">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="description">
+            <p>
+                Oxfords are considered the quintessential formal shoe, 
+                known for their sleek and polished look. 
+                They originated in Scotland and Ireland, but 
+                their name comes from Oxford University, where 
+                students popularized the style in the 
+                1800s. Oxfords feature a closed lacing system, meaning 
+                the shoelace eyelets are stitched underneath the 
+                vamp, giving them a clean, streamlined appearance. 
+                They are the go-to option for business settings, 
+                formal events, and black-tie affairs. Typically made 
+                from high-quality leather, Oxfords come in various styles, 
+                including cap-toe, plain-toe, and wingtip, each offering 
+                slight variations in formality and design. 
+            </p>
+        </div>
+        <div class="purchase">
+            <h2><em>Oxfords</em></h2>
+            <p>Leather Shoes</p>
+            <p>₱ 3,000.00</p>
+            <p>Select Size:</p>
+            <div id="sizeOptions">
+                <button onclick="selectSize(6, this)">6</button>
+                <button onclick="selectSize(7, this)">7</button>
+                <button onclick="selectSize(8, this)">8</button>
+                <button onclick="selectSize(9, this)">9</button>
+                <button onclick="selectSize(10, this)">10</button>
+                <button onclick="selectSize(11, this)">11</button>
+            </div>
+            <button class="btn" onclick="storeSizeAndRedirect()">PURCHASE</button>
+        </div>
+        
+    </div>
+    <script>
+        let selectedSize = null;
+        function selectSize(size, buttonElement) {
+            selectedSize = size;
+            const allButtons = document.querySelectorAll('#sizeOptions button');
+            allButtons.forEach(button => button.classList.remove('active'));
+            buttonElement.classList.add('active');
+        }
+
+        function storeSizeAndRedirect() {
+            if (selectedSize) {
+                localStorage.setItem('shoeSize', selectedSize);
+                window.location.href = 'Purchase1.html';
+            } else {
+                alert('Please select a size before purchasing.');
+            }
+        }
+    </script>
+</body>
+</html>

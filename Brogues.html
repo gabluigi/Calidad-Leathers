@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad Leathers - Brogues</title>
+    <link rel="stylesheet" href="shoeStyle.css">
+    <link rel="icon" href="media/thumbs.png">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="media/mainLogo.png" alt="Calidad Logo" id = "logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Contacts.html">Contacts</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+            <div id="user">
+                <a href="Account.html"><img src="media/profile.png" alt="User Profile" id="profile"></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container1">
+        <div class="images">
+            <img src="media/brogues1.png" alt="brogues1" id="img3">
+            <img src="media/brogues2.png" alt="brogues2" id="img4">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="description">
+            <p>
+                Brogues have a rich history that traces back to the Irish and Scottish countryside. Initially designed as a practical outdoor shoe, the perforations (broguing) were meant to allow water to drain from the shoes when walking through wet terrain. Over time, brogues evolved into a stylish and semi-formal shoe, characterized by decorative perforations along the seams and toe cap. They can be worn in casual, semi-formal, and even business-casual environments. Brogues come in various styles, including full brogues (wingtips), semi-brogues, and quarter brogues, each offering a different level of decoration.
+            </p>
+        </div>
+        <div class="purchase">
+            <h2><em>Brogues</em></h2>
+            <p>Leather Shoes</p>
+            <p>₱ 3,000.00</p>
+            <p>Select Size:</p>
+            <div id="sizeOptions">
+                <button onclick="selectSize(6, this)">6</button>
+                <button onclick="selectSize(7, this)">7</button>
+                <button onclick="selectSize(8, this)">8</button>
+                <button onclick="selectSize(9, this)">9</button>
+                <button onclick="selectSize(10, this)">10</button>
+                <button onclick="selectSize(11, this)">11</button>
+            </div>
+            <button class="btn" onclick="storeSizeAndRedirect()">PURCHASE</button>
+        </div>
+        
+    </div>
+    <script>
+        let selectedSize = null;
+        function selectSize(size, buttonElement) {
+            selectedSize = size;
+            const allButtons = document.querySelectorAll('#sizeOptions button');
+            allButtons.forEach(button => button.classList.remove('active'));
+            buttonElement.classList.add('active');
+        }
+
+        function storeSizeAndRedirect() {
+            if (selectedSize) {
+                localStorage.setItem('shoeSize', selectedSize);
+                window.location.href = 'Purchase2.html';
+            } else {
+                alert('Please select a size before purchasing.');
+            }
+        }
+    </script>
+</body>
+</html>

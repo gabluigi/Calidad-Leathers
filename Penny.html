@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad Leathers - Penny</title>
+    <link rel="stylesheet" href="shoeStyle.css">
+    <link rel="icon" href="media/thumbs.png">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="media/mainLogo.png" alt="Calidad Logo" id = "logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Contacts.html">Contacts</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+            <div id="user">
+                <a href="Account.html"><img src="media/profile.png" alt="User Profile" id="profile"></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container1">
+        <div class="images">
+            <img src="media/penny1.png" alt="penny1" id="img5">
+            <img src="media/penny2.png" alt="penny2" id="img6">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="description">
+            <p>
+                Penny loafers are a timeless and versatile slip-on shoe that gained popularity in the mid-20th century. Their defining feature is a leather strap across the vamp with a small slit where, traditionally, wearers would place a penny for good luck—hence the name. Originating from Norwegian fisherman shoes, they became a staple of Ivy League style in America during the 1950s. Penny loafers are known for their casual elegance, making them suitable for both business-casual and leisure settings. With their easy slip-on design and clean silhouette, they strike the perfect balance between comfort and sophistication.
+            </p>
+        </div>
+        <div class="purchase">
+            <h2><em>Penny</em></h2>
+            <p>Loafers Shoes</p>
+            <p>₱ 2,800.00</p>
+            <p>Select Size:</p>
+            <div id="sizeOptions">
+                <button onclick="selectSize(6, this)">6</button>
+                <button onclick="selectSize(7, this)">7</button>
+                <button onclick="selectSize(8, this)">8</button>
+                <button onclick="selectSize(9, this)">9</button>
+                <button onclick="selectSize(10, this)">10</button>
+                <button onclick="selectSize(11, this)">11</button>
+            </div>
+            <button class="btn" onclick="storeSizeAndRedirect()">PURCHASE</button>
+        </div>
+        
+    </div>
+    <script>
+        let selectedSize = null;
+        function selectSize(size, buttonElement) {
+            selectedSize = size;
+            const allButtons = document.querySelectorAll('#sizeOptions button');
+            allButtons.forEach(button => button.classList.remove('active'));
+            buttonElement.classList.add('active');
+        }
+
+        function storeSizeAndRedirect() {
+            if (selectedSize) {
+                localStorage.setItem('shoeSize', selectedSize);
+                window.location.href = 'Purchase3.html';
+            } else {
+                alert('Please select a size before purchasing.');
+            }
+        }
+    </script>
+</body>
+</html>

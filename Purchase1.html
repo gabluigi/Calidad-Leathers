@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad Leathers - Thank You For Purchasing!</title>
+    <link rel="stylesheet" href="purchaseStyle.css">
+    <link rel="icon" href="media/thumbs.png">
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><img src="media/mainLogo.png" alt="Calidad Logo" id = "logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Contacts.html">Contacts</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+            </ul>
+            <div id="user">
+                <a href="Account.html"><img src="media/profile.png" alt="User Profile" id="profile"></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container1">
+        <div>
+            <h2><em>Thank You <br>For Purchasing!</em></h2>
+            <p>Your Calidad Oxford Leather Shoes Size <span id="shoeSizeDisplay"></span> <br>Will Be Delivered.</p>
+        </div>
+        <div class="shoeimg">
+            <img src="media/oxfords2.png" alt="oxfords" id="oxfords">
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="learnmore">
+            <a href="index.html" class="btn">RETURN TO HOME</a>
+        </div>
+    </div>
+    <script>
+        const shoeSize = localStorage.getItem('shoeSize');
+        if (shoeSize) {
+            document.getElementById('shoeSizeDisplay').textContent = shoeSize;
+        } else {
+            document.getElementById('shoeSizeDisplay').textContent = 'No size selected.';
+        }
+    </script>
+</body>
+</html>
